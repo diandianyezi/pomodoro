@@ -97,11 +97,12 @@ export default {
 </script>
 <style lang="less" scoped>
 .my-pomodoro {
-  background-color: rgba(0,0,0, 1);
-  color: #fff;
+  // background-color: rgba(0,0,0, 1);
+  color: rgba(255,255,255,.8);
   height: 100vh;
   width: 100vw;
   padding-top: 30px;
+  box-sizing: border-box;
 
   h1 {
     text-align: center;
@@ -112,11 +113,21 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 600px;
+    // min-width: 600px;
     &-item {
-      background-color: rgb(10,10,10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+      background: linear-gradient(
+        to top right,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25)
+      );
+      box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.2),
+        -10px 10px 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
       border-radius: 16px;
       height: 40vw;
+      line-height: 40vw;
       text-align: center;
       vertical-align: middle;
       width: 40vw;
